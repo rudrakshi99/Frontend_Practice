@@ -1,0 +1,191 @@
+*{ /* for all elements - reset default properties*/
+    margin:0;
+    padding:0;
+}
+h1{
+    color:white;
+}
+body{
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.6em; /* space between lines*/
+}
+
+/******** colors ******/
+/* color names, html5 color names, hexadecimal,RGB */
+a{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    color:red;
+}
+a:active{ /*when clicked on it*/
+    color: green;
+}
+a:visited{
+    color:white;
+}
+.container{
+    width: 80%; /*  % for responsive  */
+    margin: auto;
+}
+.button{ /* .my-form input[type="submit"] */
+    background-color: black;
+    color: blanchedalmond;
+    padding: 10px 15px; /* top-bottom left-right */
+    border:none;
+}
+.button:hover{
+    background:red;
+    color: skyblue;
+}
+.clr{ /*clear floats above it*/
+    clear:both;
+}
+.box-1{ /* class */
+   background-color: rgb(71, 76, 76);
+   color: rgb(232, 223, 240);
+   border: 5px black solid; /* all four side*/
+   border-width: 3px;
+   border-bottom-style: 10px;
+   border-top-style:dotted;
+   padding:20px;  /* all four side*/
+   margin-top:20px; /*-----------*/
+   margin:20px 0;
+}
+/* text formatting */
+.box-1 h1{ /*h1 within box-1 class*/
+   font-family:Tahoma;
+   font-weight: 800;
+   font-style: italic;
+   text-decoration: underline;
+   text-transform: uppercase;
+   letter-spacing: 0.2em;
+   word-spacing: 1em;
+}
+
+p{
+    margin: 5px 10px 5px 10px; /* top right bottom left */
+}
+
+.box-2{
+    border:3px dotted green;
+    padding:20px;
+    margin:20px 0;
+
+}
+.categories{ /* list */
+   border:1px green solid;
+   padding: 10px;
+   border-radius: 15px;
+}
+
+.categories h2{
+    text-align: center;
+
+}
+
+.categories ul{
+   padding:0; /*reset defaul*/
+   padding-left: 20px;
+   list-style: square;
+   list-style: none;
+}
+.categories li{
+    padding-bottom: 8px;
+    border-bottom:dotted 1px black;
+    list-style-image: url();
+}
+
+.my-form{ /*entire form*/
+    padding: 20px;
+
+}
+.my-form .form-group{ /*each category*/
+     padding-bottom: 15px;
+
+}
+.my-form label{
+    display: block;
+
+}
+.my-form input[type="text"], .my-form textarea{ 
+    padding: 8px;
+    width: 100%;
+}
+
+.block{
+    float:left;  /*-----------*/
+    width:33.3%;
+    border:1px solid black;
+    padding: 10px;
+    box-sizing: border-box; /*make all box in one line of width:33.3%;*/
+}
+
+#main-block{
+    float: left;
+    width: 70%;
+    padding:15px;
+    box-sizing: border-box;
+}
+
+#sidebar{
+    float: right;
+    width: 30%;
+    background-color: gray;
+    padding:15px;
+    box-sizing: border-box;
+}
+
+/********** positioning ***********/
+/* static, relative, absolute, fixed, initial, inherit*/
+
+.p-box{
+    width: 800px;
+    height: 500px;
+    border:1px solid black;
+    margin-top:30px;
+    position: relative; /* every property will act relative to box*/
+                        /* otherwise - moved to top of page - 40px from top of page*/
+    background-image: url('../img/Bench-Background-48-1600x1000.jpg'); 
+    background-repeat: no-repeat;
+    background-position: 100px 200px;   
+    background-position: center top;
+
+}
+
+.p-box h1{
+    position: absolute; 
+    top:40px; 
+    left:200px;
+}
+
+.p-box h2{
+   position: absolute;
+   bottom:40px;
+   right: 100px;
+}
+
+.fix-me{
+    position: fixed;
+    top:400px; /*fixed on page no matter how much we scroll*/
+}
+
+/************* sudo class **************/
+.my-list li:first-child{
+    background:red;
+
+}
+.my-list li:last-child{
+    background:blue;
+    
+}
+.my-list li:nth-child(5){
+     background: yellow;
+}
+.my-list li:nth-child(even){
+    background: yellow;
+}
